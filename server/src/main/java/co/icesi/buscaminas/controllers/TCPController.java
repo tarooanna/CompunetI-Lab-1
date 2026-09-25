@@ -39,7 +39,7 @@ public class TCPController {
     public TCPController(ServicesImpl services, int port) {
         this.services = services;
         try {
-            serverSocket = new ServerSocket ( port , 50 , InetAddress . getByName (" 0.0.0.0 ") );
+            serverSocket = new ServerSocket (port,50,InetAddress.getByName ("0.0.0.0"));
 
             executor = Executors.newFixedThreadPool(5);
             gson = new GsonBuilder().create();
